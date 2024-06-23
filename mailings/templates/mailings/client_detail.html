@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% block content%}
+<div class="col-12">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Карточка клиента
+                </h3>
+            </div>
+            <div class="card-body">
+                <h6 class="card-text">{{ client.email }}: {{ client.first_name }} {{ client.last_name }}</h6>
+                <p class="card-text">{{ client.comment }}</p>
+                <div class="btn-group">
+                    <a href="{% url 'mailings:client_list' %}"
+                       class="btn btn-success">Назад</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% block content%}
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="col-12 mb-5">
+            {% if user.is_authenticated %}
+            <a href="{% url 'mailings:client_create' %}" class="btn btn-primary btn-lg">Добавить клиента</a>
+            {% endif %}
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for client in client_list %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6 class="card-text">{{ client.email }}: {{ client.first_name }} {{ client.last_name }}</h6>
+                        <p class="card-text">{{ client.comment }}</p>
+                        <div class="btn-group">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'mailings:client_detail' client.pk %}"
+                               class="btn btn-primary btn-sm">Посмотреть</a>
+                            {% endif %}
+                            {% if user == client.owner %}
+                            <a href="{% url 'mailings:client_update' client.pk %}"
+                               class="btn btn-primary btn-sm">Изменить</a>
+                            <a href="{% url 'mailings:client_delete' client.pk %}"
+                               class="btn btn-primary btn-sm">Удалить</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

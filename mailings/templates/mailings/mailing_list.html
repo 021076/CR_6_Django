@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% block content%}
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="col-12 mb-5">
+            {% if user.is_authenticated %}
+            <a href="{% url 'mailings:mailing_create' %}" class="btn btn-primary btn-lg">Добавить рассылку</a>
+            <a href="{% url 'mailings:mailingstatistic_list' %}" class="btn btn-primary btn-lg">Посмотреть статистику
+                рассылок</a>
+            {% endif %}
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for mailing in mailings_list %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6 class="card-text">Тема сообщения: {{ mailing.message }}</h6>
+                        <p class="card-text">Клиенты: {{ mailing.clients.all|join:", " }}</p>
+                        <p class="card-text">Периодичность отправки: {{ mailing.period }}</p>
+                        <p class="card-text">Статистика: {{ mailing.status }}</p>
+                        <div class="btn-group">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'mailings:mailing_detail' mailing.pk %}"
+                               class="btn btn-primary btn-sm">Посмотреть</a>
+                            {% endif %}
+                            {% if user == mailing.owner %}
+                            <a href="{% url 'mailings:mailing_update' mailing.pk %}"
+                               class="btn btn-primary btn-sm">Изменить</a>
+                            <a href="{% url 'mailings:mailing_delete' mailing.pk %}"
+                               class="btn btn-primary btn-sm">Удалить</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

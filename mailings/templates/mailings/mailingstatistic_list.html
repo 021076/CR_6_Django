@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% block content%}
+<div class="col-12 mb-5">
+    <div class="container col-xl-10 col-xxl-10 px-4 py-5">
+        <h3 class="card-title">
+            Статистика отправки рассылок
+        </h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Рассылка</th>
+                <th scope="col">Дата и время последней попытки</th>
+                <th scope="col">Статус попытки</th>
+                <th scope="col">Ответ сервера</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for mailingstatistic in mailingstatistic_list %}
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ mailingstatistic.mailing }}</td>
+                <td>{{ mailingstatistic.date_time_last_attempt|date:"d.m.Y - H:i" }}</td>
+                <td>{{ mailingstatistic.status_attempt }}</td>
+                <td>{{ mailingstatistic.response }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="btn-group">
+            <a href="{% url 'mailings:mailing_list' %}" class="btn btn-success">Назад</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
