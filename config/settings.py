@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #
-    # 'catalog.apps.CatalogConfig',
-    # 'blog.apps.BlogConfig',
+    'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
-    # 'mailings.apps.MailingsConfig',
+    'main.apps.MainConfig',
+    'mailings.apps.MailingsConfig',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,10 +67,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-            # 'libraries': {
-            #     'catalog_tags': 'catalog.templates.catalog.templatetags.catalog_tags',
-            #
-            # }
+            'libraries': {
+                'main_tags': 'main.templates.main.templatetags.main_tags',
+
+            }
         },
     },
 ]
