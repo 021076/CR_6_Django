@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-6">Количество уникальных клиентов: {{ unique_client_count }}</h1>
+    <h1 class="display-6">Количество рассылок всего: {{ mailing_count }}</h1>
+    <h1 class="display-6">Количество активных рассылок: {{ active_mailing_count }}</h1>
+    <div class="mb-5"></div>
+    <p class="lead">Последнee в нашем блоге</p>
+    <ol class="list-group">
+        {% for blog in latest_objects %}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <img src="{{ blog.image.url }}" width="200" height="auto" class="img-thumbnail">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">
+                    <a href="{% url 'blog:post_detail' blog.pk  %}"
+                       class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover px-2">
+                        {{ blog.title }}
+                    </a>
+                </div>
+                {{ blog.content|truncatechars:55 }}
+            </div>
+            <span class="badge bg-secondary rounded-pill">{{ blog.number_views }} просмотров</span>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}
