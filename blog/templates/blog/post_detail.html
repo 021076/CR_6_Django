@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load main_tags %}
+{% block content%}
+<div class="col-12">
+    <form class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        {{ post.title}}
+                    </h3>
+                </div>
+                <img class="card-img-top" src="{{ post.preview | media_filter }}"
+                     alt="{{ post.title }}">
+                <div class="card-body">
+                    <p>
+                        {{ post.content }}
+                    </p>
+                </div>
+                <div class="card-footer">
+                    Просмотры: {{ post.number_views }}
+                </div>
+                <div>
+                    {% if post.is_published %}
+                    <a href="{% url 'blog:toggle_activity' object.pk %}" class='btn btn-warning btn-sm'>Снять с
+                        публикации </a>
+                    {% else %}
+                    <a href="{% url 'blog:toggle_activity' object.pk %}" class='btn btn-success btn-sm'>Опубликовать</a>
+                    {% endif %}
+                    <a href="{% url 'blog:post_list' %}" class="btn btn-primary btn-sm">Назад</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
