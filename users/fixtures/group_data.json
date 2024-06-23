@@ -1,0 +1,10 @@
+[
+  {
+    "model": "users.user_groups",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "group": 1
+    }
+  }
+]
