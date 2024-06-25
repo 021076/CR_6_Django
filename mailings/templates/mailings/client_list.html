@@ -2,9 +2,10 @@
 {% block content%}
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
+        <h2 class="fw-light">Работа с клиентами</h2>
         <div class="col-12 mb-5">
             {% if user.is_authenticated %}
-            <a href="{% url 'mailings:client_create' %}" class="btn btn-primary btn-lg">Добавить клиента</a>
+            <a href="{% url 'mailings:client_create' %}" class="btn btn-primary btn-sm">Добавить клиента</a>
             {% endif %}
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

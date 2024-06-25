@@ -1,5 +1,4 @@
 from django.urls import path
-
 from blog.apps import BlogConfig
 from blog.views import PostCreateView, PostListView, PostDetailView, PostUpdateView, PostDeleteView, toggle_activity
 

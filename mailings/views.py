@@ -1,6 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
-from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView, DetailView
 
@@ -198,7 +197,6 @@ class MailingStatisticListView(ListView):
         context['mailingstatistic_list'] = mailingstatistic_list
         return context
 
-
     def get_queryset(self):
         user = self.request.user
         if user.is_superuser:
@@ -208,19 +206,3 @@ class MailingStatisticListView(ListView):
                 owner=user.pk
             )
         return queryset
-
-# def get_context_data(self, *args, **kwargs):
-#     context = super().get_context_data(*args, **kwargs)
-#     mailingstatistic_list = MailingStatistic.objects.all()
-#     context['mailingstatistic_list'] = mailingstatistic_list
-#     return context
-#
-#
-# class MailingStatisticDetailView(DetailView):
-#     model = MailingStatistic
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         mailing_statistic = self.get_object()
-#         context['mailing_statistic'] = mailing_statistic
-#         return context

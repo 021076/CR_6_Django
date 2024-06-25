@@ -1,6 +1,6 @@
 from django.urls import path
-
 from mailings.apps import MailingsConfig
+from mailings.scheduled import start_scheduler
 from mailings.views import MailingListView, MailingCreateView, MailingDetailView, MailingUpdateView, MailingDeleteView, \
     ClientListView, ClientCreateView, ClientUpdateView, ClientDetailView, ClientDeleteView, MailingStatisticListView, \
     MessageListView, MessageCreateView, MessageUpdateView, MessageDetailView, MessageDeleteView
@@ -24,4 +24,5 @@ urlpatterns = [
     path('mailing/<int:pk>/detail/', MailingDetailView.as_view(), name='mailing_detail'),
     path('mailing/<int:pk>/delete/', MailingDeleteView.as_view(), name='mailing_delete'),
     path('mailing_statistic/', MailingStatisticListView.as_view(), name='mailingstatistic_list'),
+    path('mailing_statistic/start_scheduler/', start_scheduler, name='start_scheduler'),
 ]

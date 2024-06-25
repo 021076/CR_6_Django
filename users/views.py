@@ -47,7 +47,7 @@ class EditView(UpdateView):
     model = User
     form_class = UserEditForm
     template_name = 'users/user_form.html'
-    success_url = reverse_lazy('users:login')
+    success_url = reverse_lazy('main:index')
 
     def get_object(self, queryset=None):
         return self.request.user

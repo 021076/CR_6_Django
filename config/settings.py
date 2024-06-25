@@ -37,11 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #
+    'django_apscheduler',
+    #
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
     'mailings.apps.MailingsConfig',
 ]
+
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"  # Default
+
+SCHEDULER_DEFAULT = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -167,7 +173,6 @@ if CACHE_ENABLED:
         'default': {
             'BACKEND': 'django.core.cache.backends.redis.RedisCache',
             'LOCATION': os.getenv('CACHE_LOCATION'),
-            # 'LOCATION': 'redis://username:password@127.0.0.1:6379',-- если redis закрыт авторизацией
             'TIMEOUT': 300,  # Ручная регулировка времени жизни кеша в секундах, по умолчанию 300
         }
     }

@@ -6,3 +6,6 @@ class MailingsConfig(AppConfig):
     name = 'mailings'
     verbose_name = 'Mailings'
 
+    def ready(self):
+        from . import scheduled
+        scheduled.start_scheduler()

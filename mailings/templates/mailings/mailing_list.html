@@ -2,10 +2,11 @@
 {% block content%}
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
+        <h2 class="fw-light">Работа с рассылками</h2>
         <div class="col-12 mb-5">
             {% if user.is_authenticated %}
-            <a href="{% url 'mailings:mailing_create' %}" class="btn btn-primary btn-lg">Добавить рассылку</a>
-            <a href="{% url 'mailings:mailingstatistic_list' %}" class="btn btn-primary btn-lg">Посмотреть статистику
+            <a href="{% url 'mailings:mailing_create' %}" class="btn btn-primary btn-sm">Добавить рассылку</a>
+            <a href="{% url 'mailings:mailingstatistic_list' %}" class="btn btn-primary btn-sm">Посмотреть статистику
                 рассылок</a>
             {% endif %}
         </div>

@@ -1,6 +1,5 @@
 from django import forms
 from django.forms import ModelForm, BooleanField
-
 from blog.models import Post
 
 
@@ -18,7 +17,6 @@ class PostForm(StyleMixin, forms.ModelForm):
     class Meta:
         model = Post
         fields = '__all__'
-            # ('title', 'content', 'preview', 'is_published', 'owner')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

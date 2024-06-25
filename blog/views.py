@@ -1,5 +1,4 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
@@ -23,7 +22,6 @@ class PostCreateView(CreateView, LoginRequiredMixin):
 class PostUpdateView(LoginRequiredMixin, UpdateView):
     model = Post
     form_class = PostForm
-    # success_url = reverse_lazy('blog:post_list')
 
     def form_valid(self, form):
         if form.is_valid():
@@ -33,12 +31,6 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return reverse('blog:post_detail', args=[self.kwargs.get('pk')])
-
-    # def get_form_class(self):
-    #     user = self.request.user
-    #     if user == self.object.owner:
-    #         return PostForm
-    #     raise PermissionDenied
 
 
 class PostDeleteView(DeleteView):

@@ -1,28 +1,34 @@
 {% extends "main/base.html" %}
+{% load main_tags %}
 {% load static %}
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-6">Количество уникальных клиентов: {{ unique_client_count }}</h1>
-    <h1 class="display-6">Количество рассылок всего: {{ mailing_count }}</h1>
-    <h1 class="display-6">Количество активных рассылок: {{ active_mailing_count }}</h1>
+    <h4>Количество уникальных клиентов: {{ unique_client_count }}</h4>
+    <h4>Количество рассылок всего: {{ mailing_count }}</h4>
+    <h4>Количество активных рассылок: {{ active_mailing_count }}</h4>
     <div class="mb-5"></div>
-    <p class="lead">Последнee в нашем блоге</p>
-    <ol class="list-group">
-        {% for blog in latest_objects %}
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <img src="{{ blog.image.url }}" width="200" height="auto" class="img-thumbnail">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">
-                    <a href="{% url 'blog:post_detail' blog.pk  %}"
-                       class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover px-2">
-                        {{ blog.title }}
-                    </a>
-                </div>
-                {{ blog.content|truncatechars:55 }}
-            </div>
-            <span class="badge bg-secondary rounded-pill">{{ blog.number_views }} просмотров</span>
-        </li>
+    <h4>Новые статьи</h4>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Тема</th>
+            <th scope="col">Краткое содержание</th>
+            <th scope="col">Количество просмотров</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in new_posts %}
+        <tr>
+            <td><a href="{% url 'blog:post_detail' post.pk  %}"
+                   сlass="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                {{ post.title }}
+            </a>
+            </td>
+            <td>{{ post.content|truncatechars:100 }}</td>
+            <td>{{ post.number_views }}</td>
+        </tr>
         {% endfor %}
-    </ol>
+        </tbody>
+    </table>
 </div>
 {% endblock %}

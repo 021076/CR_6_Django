@@ -14,7 +14,7 @@
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn btn-success">Сохранить</button>
-                    <a href="{% url 'users:login' %}" class="btn btn-warning">Отменить</a>
+                    <a href="{% url 'main:index' %}" class="btn btn-warning">Отменить</a>
                 </div>
             </div>
         </div>

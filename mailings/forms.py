@@ -17,7 +17,6 @@ class ClientForm(StyleMixin, forms.ModelForm):
     class Meta:
         model = Client
         fields = '__all__'
-        # ('first_name', 'last_name', 'email', 'comment')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -29,7 +28,6 @@ class MessageForm(StyleMixin, forms.ModelForm):
     class Meta:
         model = Message
         fields = '__all__'
-        # ('subject_line', 'body',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -41,14 +39,11 @@ class MailingForm(StyleMixin, forms.ModelForm):
     class Meta:
         model = Mailing
         fields = '__all__'
-        # ('message', 'period', 'status', )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
-        # self.fields["message"].widget.attrs['class'] = 'select'
-        # self.fields["client"].widget.attrs['class'] = 'select'
         self.fields["period"].widget.attrs['class'] = 'select'
         self.fields["status"].widget.attrs['class'] = 'select'
 
@@ -57,7 +52,6 @@ class MailingStatisticForm(StyleMixin, forms.ModelForm):
     class Meta:
         model = MailingStatistic
         fields = '__all__'
-        # ('status_attempt', 'mailing', 'response',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

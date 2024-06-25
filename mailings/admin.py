@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from mailings.models import Client, Mailing, MailingStatistic, Message
 
 

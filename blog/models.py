@@ -1,5 +1,4 @@
 from django.db import models
-
 from users.models import User
 
 NULLABLE = {'blank': True, 'null': True}
@@ -14,7 +13,6 @@ class Post(models.Model):
     is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
     number_views = models.IntegerField(default=0, verbose_name='Количество просмотров')
     owner = models.ForeignKey(User, on_delete=models.CASCADE, **NULLABLE, verbose_name='Владелец')
-
 
     def __str__(self):
         return f'{self.title}'
