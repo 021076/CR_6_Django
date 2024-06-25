@@ -28,11 +28,8 @@
                     {% else %}
                     <a href="{% url 'blog:toggle_activity' object.pk %}" class='btn btn-success btn-sm'>Опубликовать</a>
                     {% endif %}
-                    {% if user.is_authenticated %}
-                    <a href="{% url 'main:index' %}" class="btn btn-primary btn-sm">Назад</a>
-                    {% else %}
-                    <a href="{% url 'blog:post_list' %}" class="btn btn-primary btn-sm">Назад</a>
-                    {% endif %}
+                      <a href="{% url 'main:index' %}" class="btn btn-primary btn-sm">На главную</a>
+                    <a href="{% url 'blog:post_list' %}" class="btn btn-primary btn-sm">В блог</a>
                 </div>
             </div>
         </div>
