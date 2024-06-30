@@ -44,9 +44,7 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'mailings.apps.MailingsConfig',
 ]
-
-APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"  # Default
-
+APSCHEDULER_DATETIME_FORMAT = "d.m.Y - H:i e"  # Default
 SCHEDULER_DEFAULT = True
 
 MIDDLEWARE = [
@@ -89,11 +87,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_PG_NAME'),  # Название БД
-        'USER': os.getenv('DB_PG_USER'),  # Пользователь для подключения
-        'PASSWORD': os.getenv('DB_PG_PASSWORD'),  # Пароль для этого пользователя
-        'HOST': os.getenv('DB_PG_HOST'),  # Адрес, на котором развернут сервер БД
-        'PORT': os.getenv('DB_PG_PORT'),  # Порт, на котором работает сервер БД
+        'NAME': os.getenv('DB_NAME'),  # Название БД
+        'USER': os.getenv('DB_USER'),  # Пользователь для подключения
+        'PASSWORD': os.getenv('DB_PASSWORD'),  # Пароль для этого пользователя
+        'HOST': os.getenv('DB_HOST'),  # Адрес, на котором развернут сервер БД
+        'PORT': os.getenv('DB_PORT'),  # Порт, на котором работает сервер БД
     }
 }
 
@@ -122,6 +120,9 @@ LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
+# 'UTC'
+# 'Asia/Yekaterinburg'
+
 USE_I18N = True
 
 USE_TZ = True
@@ -148,20 +149,12 @@ LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# mail.ru
-EMAIL_HOST = os.getenv('HOST_MAIL')
-EMAIL_PORT = os.getenv('HOST_MAIL_PORT')
-EMAIL_USE_TLS = os.getenv('HOST_MAIL_TLS')
-EMAIL_USE_SSL = os.getenv('HOST_MAIL_SSL')
-EMAIL_HOST_USER = os.getenv('HOST_USER_MAIL')
-EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD_MAIL')
-# yandex
-# EMAIL_HOST = os.getenv('HOST_YA')
-# EMAIL_PORT = os.getenv('HOST_YA_PORT')
-# EMAIL_USE_TLS = os.getenv('HOST_YA_TLS')
-# EMAIL_USE_SSL = os.getenv('HOST_YA_SSL')
-# EMAIL_HOST_USER = os.getenv('HOST_USER_YA')
-# EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD_YA'
+EMAIL_HOST = os.getenv('HOST')
+EMAIL_PORT = os.getenv('HOST_PORT')
+EMAIL_USE_TLS = os.getenv('HOST_TLS')
+EMAIL_USE_SSL = os.getenv('HOST_SSL')
+EMAIL_HOST_USER = os.getenv('HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
 
 EMAIL_SERVER = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
