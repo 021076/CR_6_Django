@@ -1,9 +1,11 @@
+from apscheduler.schedulers.background import BackgroundScheduler
 from django.urls import path
 from mailings.apps import MailingsConfig
-from mailings.scheduled import start_scheduler
+from mailings.options import period_mail_sending
 from mailings.views import MailingListView, MailingCreateView, MailingDetailView, MailingUpdateView, MailingDeleteView, \
     ClientListView, ClientCreateView, ClientUpdateView, ClientDetailView, ClientDeleteView, MailingStatisticListView, \
-    MessageListView, MessageCreateView, MessageUpdateView, MessageDetailView, MessageDeleteView
+    MessageListView, MessageCreateView, MessageUpdateView, MessageDetailView, MessageDeleteView, \
+    MailingStatisticDetailView
 
 app_name = MailingsConfig.name
 
@@ -23,6 +25,6 @@ urlpatterns = [
     path('mailing/<int:pk>/update/', MailingUpdateView.as_view(), name='mailing_update'),
     path('mailing/<int:pk>/detail/', MailingDetailView.as_view(), name='mailing_detail'),
     path('mailing/<int:pk>/delete/', MailingDeleteView.as_view(), name='mailing_delete'),
-    path('mailing_statistic/', MailingStatisticListView.as_view(), name='mailingstatistic_list'),
-    path('mailing_statistic/start_scheduler/', start_scheduler, name='start_scheduler'),
-]
+    path('mailingstatistic/', MailingStatisticListView.as_view(), name='mailingstatistic_list'),
+    path('mailingstatistic/<int:pk>/detail/', MailingStatisticDetailView.as_view(), name='mailingstatistic_detail'),
+   ]

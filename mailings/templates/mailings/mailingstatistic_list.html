@@ -10,15 +10,20 @@
                 <th scope="col">Дата и время последней попытки</th>
                 <th scope="col">Статус попытки</th>
                 <th scope="col">Ответ сервера</th>
+                <th scope="col">#</th>
             </tr>
             </thead>
             <tbody>
             {% for mailingstatistic in mailingstatistic_list %}
             <tr>
                 <td>{{ mailingstatistic.mailing }}</td>
-                <td>{{ mailingstatistic.date_time_last_attempt|date:"d.m.Y - H:i" }}</td>
+                <td>{{ mailingstatistic.date_time_last_attempt|date:"d.m.Y - H:i e" }}</td>
                 <td>{{ mailingstatistic.status_attempt }}</td>
                 <td>{{ mailingstatistic.response }}</td>
+                <td><a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                       href="{% url 'mailings:mailingstatistic_detail' mailingstatistic.pk  %}">
+                    Посмотреть
+                </a></td>
             </tr>
             {% endfor %}
             </tbody>
