@@ -14,7 +14,8 @@
                     {% endif %}
                 </ul>
                 {% if user.is_authenticated %}
-                <h4>Меню менеджера</h4>
+                <h4>Меню менеджера </h4>
+                <h6>{{ request.user.email }} {{ request.user.first_name }} {{ request.user.last_name }}</h6>
                 <ul class="list">
                     <li><a href="{% url 'mailings:client_list' %}" class="text">Клиенты</a></li>
                     <li><a href="{% url 'mailings:message_list' %}" class="text">Сообщения</a></li>

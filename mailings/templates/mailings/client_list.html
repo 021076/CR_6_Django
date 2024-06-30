@@ -10,26 +10,26 @@
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for client in client_list %}
+            {% if user.is_authenticated %}
             <div class="col">
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h6 class="card-text">{{ client.email }}: {{ client.first_name }} {{ client.last_name }}</h6>
                         <p class="card-text">{{ client.comment }}</p>
+                        {% if user == client.owner or user.is_superuser %}
                         <div class="btn-group">
-                            {% if user.is_authenticated %}
                             <a href="{% url 'mailings:client_detail' client.pk %}"
                                class="btn btn-primary btn-sm">Посмотреть</a>
-                            {% endif %}
-                            {% if user == client.owner %}
                             <a href="{% url 'mailings:client_update' client.pk %}"
                                class="btn btn-primary btn-sm">Изменить</a>
                             <a href="{% url 'mailings:client_delete' client.pk %}"
                                class="btn btn-primary btn-sm">Удалить</a>
-                            {% endif %}
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>

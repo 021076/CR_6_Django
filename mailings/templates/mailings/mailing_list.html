@@ -12,6 +12,7 @@
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for mailing in mailings_list %}
+            {% if user.is_authenticated %}
             <div class="col">
                 <div class="card shadow-sm">
                     <div class="card-body">
@@ -19,21 +20,21 @@
                         <p class="card-text">Клиенты: {{ mailing.clients.all|join:", " }}</p>
                         <p class="card-text">Периодичность отправки: {{ mailing.period }}</p>
                         <p class="card-text">Статистика: {{ mailing.status }}</p>
+                        {% if user == mailing.owner or user.is_superuser %}
                         <div class="btn-group">
-                            {% if user.is_authenticated %}
                             <a href="{% url 'mailings:mailing_detail' mailing.pk %}"
                                class="btn btn-primary btn-sm">Посмотреть</a>
-                            {% endif %}
-                            {% if user == mailing.owner %}
                             <a href="{% url 'mailings:mailing_update' mailing.pk %}"
                                class="btn btn-primary btn-sm">Изменить</a>
                             <a href="{% url 'mailings:mailing_delete' mailing.pk %}"
                                class="btn btn-primary btn-sm">Удалить</a>
-                            {% endif %}
                         </div>
+                        {% endif %}
                     </div>
+
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>

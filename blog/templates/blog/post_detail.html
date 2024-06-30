@@ -22,13 +22,15 @@
                     Просмотры: {{ post.number_views }}
                 </div>
                 <div>
+                    {% if user == post.owner or user.is_superuser %}
                     {% if post.is_published %}
                     <a href="{% url 'blog:toggle_activity' object.pk %}" class='btn btn-warning btn-sm'>Снять с
                         публикации </a>
                     {% else %}
                     <a href="{% url 'blog:toggle_activity' object.pk %}" class='btn btn-success btn-sm'>Опубликовать</a>
                     {% endif %}
-                      <a href="{% url 'main:index' %}" class="btn btn-primary btn-sm">На главную</a>
+                    {% endif %}
+                    <a href="{% url 'main:index' %}" class="btn btn-primary btn-sm">На главную</a>
                     <a href="{% url 'blog:post_list' %}" class="btn btn-primary btn-sm">В блог</a>
                 </div>
             </div>
