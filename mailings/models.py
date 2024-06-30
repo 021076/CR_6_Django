@@ -20,6 +20,10 @@ class Client(models.Model):
     class Meta:
         verbose_name = 'Клиент'
         verbose_name_plural = 'Клиенты'
+        permissions = [
+            ("set_is_block", "Can block client"),
+            ("view_clients_list", "Can view clients list"),
+        ]
 
 
 class Message(models.Model):
@@ -50,7 +54,7 @@ class Mailing(models.Model):
     )
     objects = None
     message = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='Сообщение')
-    date_time_first_sand = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время первой отправки')
+    date_time_first_send = models.DateTimeField(auto_now_add=True, verbose_name='Дата и время первой отправки')
     period = models.CharField(max_length=20, choices=PERIOD, verbose_name='Период рассылки')
     status = models.CharField(max_length=20, choices=STATUS, default='created', verbose_name='Статус')
     clients = models.ManyToManyField(Client, verbose_name='Получатели')
@@ -63,10 +67,8 @@ class Mailing(models.Model):
         verbose_name = 'Рассылка'
         verbose_name_plural = 'Рассылки'
         permissions = [
-            (
-                "set_is_active",
-                "Can active newsletter"
-            )
+            ("set_is_deactivate", "Can deactivate mailing"),
+            ("view_all_mailings", "Can view all mailings"),
         ]
 
 
