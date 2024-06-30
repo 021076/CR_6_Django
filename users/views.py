@@ -3,6 +3,7 @@ import secrets
 import string
 
 from django.core.mail import send_mail
+from django.http import request
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView
@@ -75,3 +76,11 @@ def password_reset(request):
         return render(request, 'users/password_reset.html', context)
     else:
         return render(request, 'users/password_reset.html')
+
+
+def get_context_data(self, **kwargs):
+    user_email = User.email
+    context = {
+        'user_email': user_email,
+    }
+    return render(request, 'main/inc_menu.html', context)
