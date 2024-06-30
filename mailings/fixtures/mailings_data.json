@@ -1,0 +1,4456 @@
+[
+  {
+    "model": "mailings.client",
+    "pk": 1,
+    "fields": {
+      "first_name": "Первый",
+      "last_name": "Клиент",
+      "email": "cl1_test@mail.ru",
+      "comment": "самый первый клиент",
+      "owner": 2
+    }
+  },
+  {
+    "model": "mailings.client",
+    "pk": 2,
+    "fields": {
+      "first_name": "Вторая",
+      "last_name": "Клиентка",
+      "email": "cl2_test@mail.ru",
+      "comment": "самая красивая клиентка",
+      "owner": 2
+    }
+  },
+  {
+    "model": "mailings.client",
+    "pk": 3,
+    "fields": {
+      "first_name": "Юзеров",
+      "last_name": "Юзер",
+      "email": "cl3_test@mail.ru",
+      "comment": "без комментариев, просто лучший",
+      "owner": 1
+    }
+  },
+  {
+    "model": "mailings.client",
+    "pk": 4,
+    "fields": {
+      "first_name": "Иванов",
+      "last_name": "Иван",
+      "email": "cl4_test@mail.ru",
+      "comment": "человеческое имя!",
+      "owner": 1
+    }
+  },
+  {
+    "model": "mailings.message",
+    "pk": 1,
+    "fields": {
+      "subject_line": "Первое сообщение",
+      "body": "Добро пожаловать в наш блог",
+      "owner": 2
+    }
+  },
+  {
+    "model": "mailings.message",
+    "pk": 2,
+    "fields": {
+      "subject_line": "Сообщение 2",
+      "body": "Вам открыта возможность добавлять статьи  в блог",
+      "owner": 2
+    }
+  },
+  {
+    "model": "mailings.mailing",
+    "pk": 1,
+    "fields": {
+      "message": 1,
+      "date_time_first_send": "2024-06-27T19:05:00Z",
+      "period": "daily",
+      "status": "start",
+      "owner": 1,
+      "clients": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "mailings.mailing",
+    "pk": 2,
+    "fields": {
+      "message": 2,
+      "date_time_first_send": "2024-06-21T19:05:00Z",
+      "period": "weekly",
+      "status": "created",
+      "owner": 2,
+      "clients": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 311,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-28T19:04:30.102Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 312,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-28T19:04:30.118Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 313,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-28T19:05:30.110Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 314,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-28T19:05:31.019Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 315,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-28T19:06:30.114Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 316,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-28T19:06:30.126Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 317,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-28T19:07:30.099Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 318,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-28T19:07:30.114Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 319,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-28T19:08:30.102Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 320,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-28T19:08:30.130Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 321,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:34:28.686Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 322,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:34:28.713Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 323,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:35:28.605Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 324,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:35:28.605Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 325,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:36:28.619Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 326,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:36:28.622Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 327,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:37:28.611Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 328,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:37:28.611Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 329,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:38:28.604Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 330,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:38:28.616Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 331,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:39:28.602Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 332,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:39:28.618Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 333,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:40:28.616Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 334,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:40:28.629Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 335,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:41:55.430Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 336,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:41:55.445Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 337,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:42:55.354Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 338,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:42:55.357Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 339,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:43:55.342Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 340,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:43:55.342Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 341,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:44:55.355Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 342,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:44:55.358Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 343,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:46:55.328Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 344,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:46:55.342Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 345,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:48:01.961Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 346,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:48:01.961Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 347,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:49:45.404Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 348,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:49:45.419Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 349,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:50:45.350Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 350,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:50:45.364Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 351,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:51:45.336Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 352,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:51:45.338Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 353,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:52:45.342Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 354,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:52:45.356Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 355,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:53:45.332Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 356,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:53:45.351Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 357,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:54:45.351Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 358,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:54:45.365Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 359,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:55:45.355Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 360,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:55:45.358Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 361,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:56:45.348Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 362,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:56:45.352Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 363,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:57:45.340Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 364,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:57:45.345Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 365,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T15:59:40.928Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 366,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T15:59:40.933Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 367,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:00:40.864Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 368,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:00:40.876Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 369,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:01:40.869Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 370,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:01:40.883Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 371,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:02:40.859Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 372,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:02:40.871Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 373,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:03:40.865Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 374,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:03:40.878Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 375,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:04:46.089Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 376,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:04:46.094Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 377,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:05:46.033Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 378,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:05:46.048Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 379,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:06:46.034Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 380,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:06:46.037Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 381,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:07:46.040Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 382,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:07:46.042Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 383,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:08:46.033Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 384,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:08:46.036Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 385,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:09:46.023Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 386,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:09:46.025Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 387,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:10:46.029Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 388,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:10:46.031Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 389,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:11:46.027Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 390,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:11:46.042Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 391,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:12:46.020Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 392,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:12:46.023Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 393,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:17:48.463Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 394,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:17:48.478Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 395,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:18:48.397Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 396,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:18:48.413Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 397,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:19:48.401Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 398,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:19:48.415Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 399,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:20:48.390Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 400,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:20:48.391Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 401,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:21:48.403Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 402,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:21:48.417Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 403,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:22:48.401Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 404,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:22:48.414Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 405,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:24:50.941Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 406,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:24:50.944Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 407,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:25:50.867Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 408,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:25:50.883Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 409,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:26:50.874Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 410,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:26:50.889Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 411,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:28:50.422Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 412,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:28:50.437Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 413,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:29:50.368Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 414,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:29:50.368Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 415,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:30:50.361Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 416,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:30:50.376Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 417,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:31:50.365Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 418,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:31:50.371Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 419,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:32:50.370Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 420,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:32:50.387Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 421,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:33:50.379Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 422,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:33:50.393Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 423,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:35:43.596Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 424,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:35:43.611Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 425,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:37:20.892Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 426,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:37:20.906Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 427,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:38:27.812Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 428,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:38:27.827Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 429,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:39:27.754Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 430,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:39:27.766Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 431,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:41:09.259Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 432,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:41:09.273Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 433,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:42:09.198Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 434,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:42:09.202Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 435,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:43:09.205Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 436,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:43:09.219Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 437,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:45:47.029Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 438,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:45:47.044Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 439,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:46:46.980Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 440,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:46:46.995Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 441,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:47:48.800Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 442,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:47:48.814Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 443,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:48:48.727Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 444,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:48:48.739Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 445,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:49:55.838Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 446,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:49:55.853Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 447,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:50:55.784Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 448,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:50:55.797Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 449,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:53:20.266Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 450,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:53:20.279Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 451,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:55:12.423Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 452,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:55:12.438Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 453,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:56:12.362Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 454,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:56:12.376Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 455,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:57:12.364Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 456,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:57:12.380Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 457,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:58:12.360Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 458,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:58:12.373Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 459,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T16:59:40.756Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 460,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T16:59:40.759Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 461,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:00:40.688Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 462,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:00:40.703Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 463,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:02:13.724Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 464,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:02:13.739Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 465,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:03:13.645Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 466,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:03:13.659Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 467,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:04:13.641Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 468,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:04:13.654Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 469,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:05:13.621Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 470,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:05:13.636Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 471,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:06:13.633Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 472,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:06:13.649Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 473,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:07:13.632Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 474,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:07:13.654Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 475,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:08:13.638Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 476,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:08:13.641Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 477,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:09:13.626Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 478,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:09:13.642Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 479,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:10:13.631Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 480,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:10:13.645Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 481,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:11:13.644Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 482,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:11:13.653Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 483,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:12:13.645Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 484,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:12:13.658Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 485,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:13:26.782Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 486,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:13:26.786Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 487,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:17:20.744Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 488,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:17:20.759Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 489,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:18:37.420Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 490,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:18:37.420Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 491,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:19:37.352Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 492,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:19:37.367Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 493,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:20:37.361Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 494,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:20:37.364Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 495,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:22:34.976Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 496,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:22:34.992Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 497,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:23:34.921Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 498,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:23:34.921Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 499,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:24:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 500,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:24:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 501,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:25:34.912Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 502,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:25:34.912Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 503,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:26:34.916Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 504,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:26:35.166Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 505,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:27:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 506,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:27:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 507,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:28:34.926Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 508,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:28:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 509,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:29:34.908Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 510,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:29:34.908Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 511,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:30:34.925Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 512,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:30:34.933Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 513,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:31:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 514,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:31:34.936Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 515,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:32:34.928Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 516,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:32:34.942Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 517,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:33:34.936Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 518,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:33:34.951Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 519,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:34:34.914Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 520,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:34:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 521,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:35:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 522,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:35:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 523,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:36:34.916Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 524,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:36:34.929Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 525,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:37:34.919Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 526,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:37:34.935Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 527,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:38:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 528,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:38:34.938Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 529,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:39:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 530,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:39:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 531,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:40:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 532,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:40:34.938Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 533,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:41:34.918Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 534,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:41:34.933Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 535,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:42:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 536,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:42:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 537,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:43:34.929Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 538,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:43:34.942Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 539,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:44:34.925Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 540,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:44:34.939Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 541,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:45:34.932Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 542,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:45:34.946Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 543,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:46:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 544,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:46:34.925Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 545,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:47:34.921Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 546,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:47:34.937Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 547,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:48:34.919Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 548,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:48:34.919Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 549,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:49:34.925Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 550,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:49:34.932Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 551,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:50:34.921Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 552,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:50:34.937Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 553,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:51:34.916Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 554,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:51:34.932Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 555,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:52:34.917Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 556,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:52:34.917Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 557,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:53:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 558,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:53:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 559,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:54:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 560,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:54:34.939Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 561,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:55:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 562,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:55:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 563,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:56:34.908Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 564,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:56:34.924Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 565,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:57:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 566,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:57:34.937Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 567,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:58:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 568,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:58:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 569,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T17:59:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 570,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T17:59:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 571,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:00:34.912Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 572,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:00:34.927Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 573,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:01:34.928Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 574,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:01:34.943Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 575,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:02:34.918Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 576,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:02:34.934Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 577,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:03:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 578,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:03:34.938Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 579,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:04:34.923Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 580,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:04:34.939Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 581,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:05:34.920Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 582,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:05:34.936Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 583,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:06:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 584,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:06:34.931Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 585,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:07:34.913Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 586,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:07:34.928Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 587,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:08:34.937Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 588,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:08:34.951Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 589,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:09:34.915Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 590,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:09:34.916Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 591,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:10:34.918Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 592,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:10:34.931Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 593,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:11:34.929Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 594,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:11:34.943Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 595,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:12:34.913Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 596,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:12:34.929Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 597,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:13:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 598,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:13:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 599,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:14:34.916Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 600,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:14:34.932Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 601,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:15:34.912Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 602,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:15:34.926Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 603,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:16:34.921Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 604,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:16:34.937Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 605,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:17:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 606,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:17:34.937Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 607,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:18:34.914Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 608,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:18:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 609,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:19:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 610,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:19:34.925Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 611,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:20:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 612,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:20:34.938Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 613,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:21:34.919Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 614,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:21:34.934Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 615,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:22:34.914Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 616,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:22:34.929Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 617,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:23:34.911Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 618,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:23:34.928Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 619,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:24:34.909Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 620,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:24:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 621,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:25:34.930Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 622,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:25:34.943Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 623,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:26:34.922Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 624,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:26:34.944Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 625,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:27:34.929Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 626,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:27:34.932Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 627,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:28:34.917Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 628,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:28:34.933Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 629,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:29:34.921Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 630,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:29:34.934Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 631,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:47:17.802Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 632,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:47:17.818Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 633,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:48:17.616Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 634,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:48:17.632Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 635,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:49:17.624Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 636,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:49:17.640Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 637,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:50:17.621Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 638,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:50:17.634Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 639,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:51:17.622Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 640,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:51:17.637Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 641,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:52:17.624Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 642,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:52:17.638Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 643,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:53:17.621Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 644,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:53:17.634Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 645,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:54:17.623Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 646,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:54:17.625Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 647,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:55:17.626Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 648,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:55:17.640Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 649,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:56:17.616Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 650,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:56:18.534Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 651,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:57:17.621Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 652,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:57:17.636Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 653,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T18:58:17.619Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 654,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T18:58:17.619Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 655,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:01:21.644Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 656,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:01:21.660Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 657,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:02:21.579Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 658,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:02:21.595Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 659,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:03:21.582Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 660,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:03:21.594Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 661,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:07:49.470Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 662,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:07:49.486Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 663,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:08:49.420Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 664,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:08:49.436Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 665,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:09:49.410Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 666,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:09:49.426Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 667,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:10:49.419Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 668,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:10:49.434Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 669,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:11:49.428Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 670,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:11:49.431Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 671,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:12:49.444Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 672,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:12:49.459Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 673,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:13:49.416Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 674,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:13:49.416Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 675,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:14:49.424Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 676,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:14:49.427Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 677,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:15:49.412Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 678,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:15:49.428Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 679,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:16:49.419Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 680,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:16:49.423Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 681,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:29:05.286Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 682,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:29:05.301Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 683,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:30:05.226Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 684,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:30:05.240Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 685,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:31:05.225Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 686,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:31:05.238Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 687,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:32:05.222Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 688,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:32:05.235Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 689,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:33:15.871Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 690,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:33:15.887Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 691,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:34:15.809Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 692,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:34:15.823Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 693,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:35:15.814Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 694,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:35:15.827Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 695,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:36:15.815Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 696,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:36:15.828Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 697,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:37:15.817Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 698,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:37:15.829Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 699,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:38:15.817Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 700,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:38:15.830Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 701,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:39:15.813Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 702,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:39:15.826Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 703,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:40:15.806Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 704,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:40:15.819Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 705,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:41:48.689Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 706,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:41:48.705Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 707,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:42:48.619Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 708,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:42:48.633Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 709,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:43:48.607Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 710,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:43:48.621Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 711,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:44:48.608Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 712,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:44:48.608Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 713,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:45:48.611Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 714,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:45:48.625Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 715,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:46:48.607Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 716,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:46:48.610Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 717,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:47:58.470Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 718,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:47:58.475Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 719,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:50:46.366Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 720,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:50:46.381Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 721,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:52:15.446Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 722,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:52:15.452Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 723,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:53:15.372Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 724,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:53:15.374Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 725,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:54:15.374Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 726,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:54:15.380Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 727,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:55:15.378Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 728,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:55:15.382Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 729,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:57:07.731Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 730,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:57:07.747Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 731,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:58:07.653Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 732,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:58:07.666Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 733,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T19:59:07.658Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 734,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T19:59:07.672Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 735,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T20:01:50.181Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 736,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T20:01:50.185Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 737,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T20:02:50.114Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 738,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T20:02:50.130Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 739,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T20:03:50.122Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 740,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T20:03:50.122Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 741,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T20:04:50.114Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 742,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T20:04:50.130Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 743,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T20:13:51.819Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 744,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T20:13:51.834Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 745,
+    "fields": {
+      "mailing": 1,
+      "date_time_last_attempt": "2024-06-30T20:14:51.771Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  },
+  {
+    "model": "mailings.mailingstatistic",
+    "pk": 746,
+    "fields": {
+      "mailing": 2,
+      "date_time_last_attempt": "2024-06-30T20:14:51.774Z",
+      "status_attempt": "success",
+      "response": "success"
+    }
+  }
+]
