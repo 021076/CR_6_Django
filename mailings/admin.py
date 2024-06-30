@@ -16,7 +16,7 @@ class MessageAdmin(admin.ModelAdmin):
 
 @admin.register(Mailing)
 class MailingAdmin(admin.ModelAdmin):
-    list_display = ('message', 'date_time_first_sand', 'period', 'status', 'owner', 'client_list')
+    list_display = ('message', 'date_time_first_send', 'period', 'status', 'owner', 'client_list')
     search_fields = ('subject_line', 'period', 'status', 'owner',)
 
     def client_list(self, obj):
